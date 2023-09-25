@@ -7,7 +7,7 @@ Gomez, Juan Ignacio
 email: chijuan.1997@gmail.com
 
 Vicente, Lucas Agustín
-email: lcuasvicente002@gmail.com
+email: lucasvicente002@gmail.com
 
 
 Resumen del proyecto:
