@@ -4,6 +4,7 @@
 
 require_once './app/vista/vistaAut.php';
 require_once './app/modelo/modeloUsuario.php';
+require_once './app/helpers/helperAut.php';
 
 Class ControladorAut {
     private $vista;
@@ -19,7 +20,7 @@ Class ControladorAut {
     }
 
     public function aut() {
-        $nombre_usuario = $_POST['usuario'];
+        $nombre_usuario = $_POST['nombre_usuario'];
         $contrasenia = $_POST['contrasenia'];
 
         if (empty($nombre_usuario) || empty($contrasenia)) {

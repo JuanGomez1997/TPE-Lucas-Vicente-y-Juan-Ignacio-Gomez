@@ -1,0 +1,25 @@
+<?php require './templates/header.phtml'; ?>
+
+<div class="formulario">
+    <form class="form-login" method="POST" action="aut">
+        <div>
+            <label for="nombre_usuario">Nombre de Usuario</label>
+            <input type="text" name="nombre_usuario">
+        </div>
+        <div>
+            <label for="contrasenia">Contraseña</label>
+            <input type="password" name="contrasenia">
+        </div>
+       
+        <button type="submit" class="boton-login">Iniciar Sesión</button>
+
+        <?php if ($error) : ?>
+            <div class="error">
+                <?= $error ?>
+            </div> 
+        <?php endif ?>
+
+    </form>
+</div>
+
+<?php require './templates/footer.phtml'; ?>
