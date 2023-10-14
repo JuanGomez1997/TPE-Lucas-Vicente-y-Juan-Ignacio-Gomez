@@ -1,19 +1,20 @@
-<?php require './templates/header.phtml'; ?>
+{include file="header.tpl"}
 
 <div>
     <h2>Generos Disponibles</h2>
     <ul class="list-group list-group-flush">
-    <?php foreach ($generos as $genero){ ?>    
+    {foreach from=$generos item=$genero}    
         <li class="list-group-item">
-            <span><?=$genero->nombre?></span>
+            <span>{$genero->nombre}</span>
             <div>
-                <a href='librosporgenero/$genero->id_genero' type='button' class='btn btn-success'>Ver genero</a>
-                <a href='editargenero/$genero->id_genero' type='button' class='btn btn-warning'>Editar genero</a>
-                <a href='eliminargenero/$genero->id_genero' type='button' class='btn btn-danger'>Eliminar genero</a>
+                <a href='librosporgenero/{$genero->id_genero}' type='button' class='btn btn-success'>Ver genero</a>
+                <!-- esto solo lo ve cuando se loguea-->
+                <a href='editargenero/{$genero->id_genero}' type='button' class='btn btn-warning'>Editar genero</a>
+                <a href='eliminargenero/{$genero->id_genero}' type='button' class='btn btn-danger'>Eliminar genero</a>
             </div>
         </li>
-    <?php }?>    
+    {/foreach}    
     </ul>
 </div>
 
-<?php require './templates/footer.phtml'; ?>
+{include file="footer.tpl"}
