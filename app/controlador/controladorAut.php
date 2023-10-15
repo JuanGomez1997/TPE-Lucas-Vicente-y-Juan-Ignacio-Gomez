@@ -11,8 +11,8 @@ Class ControladorAut {
     private $modelo;
 
     function __construct() {
-        $this->modelo = new ModeloUsuario();
         $this->vista = new VistaAut();
+        $this->modelo = new ModeloUsuario();
     }
 
     public function mostrarLogin() {
@@ -32,11 +32,15 @@ Class ControladorAut {
         if ($usuario && password_verify($contrasenia, $usuario->contrasenia)) {
             
             AutHelper::login($usuario);
-
             header('location: ' . BASE_URL);
         }
         else {
             $this->vista->mostrarLogin('Usuario inválido');
         }
+    }
+
+    public function logout() {
+        AutHelper::logout();
+        header('Location: ' . BASE_URL);    
     }
 }

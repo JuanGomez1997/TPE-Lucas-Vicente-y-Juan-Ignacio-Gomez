@@ -1,25 +1,25 @@
-<?php require './templates/header.phtml'; ?>
+{include file="header.tpl"}
 
 <div class="formulario">
     <form class="form-login" method="POST" action="aut">
         <div>
             <label for="nombre_usuario">Nombre de Usuario</label>
-            <input type="text" name="nombre_usuario">
+            <input type="text" name="nombre_usuario" id="nombre_usuario">
         </div>
         <div>
             <label for="contrasenia">Contraseña</label>
-            <input type="password" name="contrasenia">
+            <input type="password" name="contrasenia" id="contrasenia">
         </div>
        
         <button type="submit" class="boton-login">Iniciar Sesión</button>
 
-        <?php if ($error) : ?>
+        {if $error}
             <div class="error">
-                <?= $error ?>
-            </div> 
-        <?php endif ?>
+                <p>{$error}</p>
+            </div>
+        {/if}
 
     </form>
 </div>
 
-<?php require './templates/footer.phtml'; ?>
+{include file="footer.tpl"}

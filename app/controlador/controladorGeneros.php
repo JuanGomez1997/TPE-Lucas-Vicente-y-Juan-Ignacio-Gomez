@@ -1,6 +1,8 @@
 <?php
-    require_once './app/modelo/modeloGeneros.php';
-    require_once './app/vista/vistaGeneros.php';
+require_once './app/modelo/modeloGeneros.php';
+require_once './app/vista/vistaGeneros.php';
+require_once './app/helpers/helperAut.php';
+
     class ControladorGeneros{
         private $vistaGenero;
         private $modeloGenero;
