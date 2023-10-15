@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 09:17:51
+/* Smarty version 4.2.1, created on 2023-10-15 15:08:19
   from 'J:\xammp\htdocs\Web 2\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\templates\listadoGeneros.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652a409f943db2_18884941',
+  'unifunc' => 'content_652be443c44b64_72723755',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fdd5a67d29180e42c1f05b951abe13a1d15c87ae' => 
     array (
       0 => 'J:\\xammp\\htdocs\\Web 2\\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\\templates\\listadoGeneros.tpl',
-      1 => 1697267868,
+      1 => 1697375297,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652a409f943db2_18884941 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652be443c44b64_72723755 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

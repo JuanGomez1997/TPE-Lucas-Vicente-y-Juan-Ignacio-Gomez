@@ -22,7 +22,7 @@
 
         //agregar generos nuevos
         public function agregarGenero($genero){
-            $query = $this->db_bibliotea->prepare("INSERT INTO generos(nombre) VALUES (?)");
+            $query = $this->db_bibliotea->prepare("INSERT INTO generos(genero) VALUES (?)");
             $query->execute([$genero]);
             return $this->db_bibliotea->lastInsertId();
         }
@@ -33,7 +33,7 @@
         }
         //modifico un genero existentes
         public function actualizarGenero($genero,$id){
-            $query = $this->db_bibliotea->prepare("UPDATE generos SET nombre=? WHERE generos.id_genero=?");
+            $query = $this->db_bibliotea->prepare("UPDATE generos SET genero=? WHERE generos.id_genero=?");
             $query->execute([$genero,$id]);
         }
 

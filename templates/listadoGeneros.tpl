@@ -5,7 +5,7 @@
     <ul class="list-group list-group-flush">
     {foreach from=$generos item=$genero}    
         <li class="list-group-item">
-            <span>{$genero->genero}</span>
+            <span>{$genero->nombre}</span>
             <div>
                 <a href='librosporgenero/{$genero->id_genero}' type='button' class='btn btn-success'>Ver genero</a>
                 <!-- esto solo lo ve cuando se loguea-->

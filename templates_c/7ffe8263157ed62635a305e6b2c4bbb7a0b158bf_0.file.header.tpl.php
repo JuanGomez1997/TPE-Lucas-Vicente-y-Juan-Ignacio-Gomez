@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-15 14:47:35
+/* Smarty version 4.2.1, created on 2023-10-15 17:13:22
   from 'J:\xammp\htdocs\Web 2\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652bdf6730a581_28166409',
+  'unifunc' => 'content_652c0192073a12_85130382',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ffe8263157ed62635a305e6b2c4bbb7a0b158bf' => 
     array (
       0 => 'J:\\xammp\\htdocs\\Web 2\\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\\templates\\header.tpl',
-      1 => 1697374053,
+      1 => 1697382800,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652bdf6730a581_28166409 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652c0192073a12_85130382 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +59,7 @@ function content_652bdf6730a581_28166409 (Smarty_Internal_Template $_smarty_tpl)
         </nav>
     </header>
         <!--este nav lo usariamos cuando el usuario esta logueado-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light espaciado">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
