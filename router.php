@@ -16,63 +16,56 @@ if (!empty($_GET['accion'])) {
 // login        ->          controladorAut->mostrarLogin();
 // aut          ->          controladorAut->aut();
 
+$controladorGenero= new ControladorGeneros;
+$controladorLibro= new ControladorLibros;
+$controladorAut= new ControladorAut;
+
+
+
 $params = explode('/', $accion); //parseo la accion de los parametros
     
 switch ($params[0]) {
     case ('inicio'):
-        $controlador = new ControladorLibros();
-        $controlador->mostrarLista();
+        $controladorLibro->mostrarLista();
         break;
 	case ('login'):
-        $controlador = new ControladorAut();
-		$controlador->mostrarLogin();
+		$controladorAut->mostrarLogin();
 		break;
     case 'aut':
-        $controlador = new ControladorAut();
-        $controlador->aut();
+        $controladorAut->aut();
         break;
     case 'logout':
-        $controlador = new ControladorAut();
-        $controlador->logout();
+        $controladorAut->logout();
         break;
     case ('libro'):
-        $controlador = new ControladorLibros();
-        $controlador->mostrarLibroId($params[1]);
+        $controladorLibro->mostrarLibroId($params[1]);
         break;
     case ('aniadirLibro'):
-        $controlador = new ControladorLibros();
-        $controlador->aniadirLibro();
+        $controladorLibro->aniadirLibro();
         break;
     case ('editarLibro'):
-        $controlador = new ControladorLibros();
-        $controlador->editarLibro($params[1]);
+        $controladorLibro->editarLibro($params[1]);
         break;
     case ('eliminarLibro'):
-        $controlador = new ControladorLibros();
-        $controlador->eliminarLibro($params[1]);
+        $controladorLibro->eliminarLibro($params[1]);
         break;
     case 'vergeneros':
-        $controlador = new ControladorGeneros();
-        $controlador->listarGeneros();
+        $controladorGenero->listarGeneros();
         break;
     case 'agregargenero':
-        $controlador = new ControladorGeneros();
-        $controlador->agregarGenero();
+        $controladorGenero->agregarGenero();
         break;
     case 'librosporgenero':
         $id = $params[1];
-        $controlador = new ControladorGeneros();
-        $controlador->listarLibrosporGenero($id);
+        $controladorGenero->listarLibrosporGenero($id);
         break;
     case 'editargenero':
         $id = $params[1];
-        $controlador = new ControladorGeneros();
-        $controlador->editarGenero($id);
+        $controladorGenero->editarGenero($id);
         break;
     case 'eliminargenero':
         $id = $params[1];
-        $controlador = new ControladorGeneros();
-        $controlador->eliminarGeneroLista($id);
+        $controladorGenero->eliminarGeneroLista($id);
         break;
     default: 
         echo '<h1> 404 Page Not Found </h1>';

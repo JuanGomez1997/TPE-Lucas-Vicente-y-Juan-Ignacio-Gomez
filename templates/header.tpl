@@ -35,7 +35,7 @@
         </nav>
     </header>
         <!--este nav lo usariamos cuando el usuario esta logueado-->
-        {* <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -45,11 +45,6 @@
                     </ul>
                 </div>
             </div>
-<<<<<<< HEAD
         </nav>
     <main>
 
-=======
-        </nav> *}
-</body>
->>>>>>> 834bec48f8a9fd64b214b559ed314afaf340ecbf

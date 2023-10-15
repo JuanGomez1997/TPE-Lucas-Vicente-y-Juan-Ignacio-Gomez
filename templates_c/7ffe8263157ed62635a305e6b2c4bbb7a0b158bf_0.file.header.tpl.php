@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-15 07:23:54
+/* Smarty version 4.2.1, created on 2023-10-15 14:47:35
   from 'J:\xammp\htdocs\Web 2\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652b776a5584e7_63402848',
+  'unifunc' => 'content_652bdf6730a581_28166409',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ffe8263157ed62635a305e6b2c4bbb7a0b158bf' => 
     array (
       0 => 'J:\\xammp\\htdocs\\Web 2\\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\\templates\\header.tpl',
-      1 => 1697347430,
+      1 => 1697374053,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652b776a5584e7_63402848 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652bdf6730a581_28166409 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,11 +44,15 @@ function content_652b776a5584e7_63402848 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
+                            <?php if (!(isset($_smarty_tpl->tpl_vars['_SESSION']->value['id_usuario']))) {?>
+                                <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
+                            <?php } else { ?>
+                                <a class="nav-link active" aria-current="page" href="logout">cerrar sesion</a>
+                            <?php }?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="vergeneros">Ver Generos</a>
-                        </li>      
+                        </li>
                     </ul>
                 </div>
             </div>
