@@ -10,15 +10,19 @@ class AutHelper {
 
     public static function login($usuario) {
         AutHelper::init();
-        $_SESSION['USER_ID'] = $usuario->id;
-        $_SESSION['USER_NOMBRE_USUARIO'] = $usuario->nombre_usuario; 
+        $_SESSION['id_usuario'] = $usuario->id;
+        $_SESSION['nombre_usuario'] = $usuario->nombre_usuario; 
     }
 
     public static function verify() {
         AutHelper::init();
-        if (!isset($_SESSION['USER_ID'])) {
-            header('Location: ' . BASE_URL . '/login');
-            die();
+        if (!isset($_SESSION['id_usuario'])) {
         }
     }
+
+    public static function logout() {
+        AutHelper::init();
+        session_destroy();
+    }   
+    
 }

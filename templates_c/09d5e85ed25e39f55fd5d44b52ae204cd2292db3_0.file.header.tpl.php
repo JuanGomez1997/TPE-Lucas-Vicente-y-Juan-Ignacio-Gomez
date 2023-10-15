@@ -1,7 +1,31 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2023-10-15 02:15:03
+  from 'Z:\XAMPP\htdocs\WebII\TPE\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_652b2f07b0b9b9_75333607',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '09d5e85ed25e39f55fd5d44b52ae204cd2292db3' => 
+    array (
+      0 => 'Z:\\XAMPP\\htdocs\\WebII\\TPE\\templates\\header.tpl',
+      1 => 1697328528,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_652b2f07b0b9b9_75333607 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="{BASE_URL}">
+    <base href="<?php echo BASE_URL;?>
+">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +44,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            {if !isset($_SESSION['id_usuario'])}
+                            <?php if (!(isset($_smarty_tpl->tpl_vars['_SESSION']->value['id_usuario']))) {?>
                                 <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
-                            {else }
+                            <?php } else { ?>
                                 <a class="nav-link active" aria-current="page" href="logout">cerrar sesion</a>
-                            {/if}
+                            <?php }?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="vergeneros">Ver Generos</a>
@@ -35,15 +59,5 @@
         </nav>
     </header>
         <!--este nav lo usariamos cuando el usuario esta logueado-->
-        {* <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="agregargenero">Agregar Genero</a>
-                        </li>      
-                    </ul>
-                </div>
-            </div>
-        </nav> *}
-</body>
+        </body><?php }
+}

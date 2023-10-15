@@ -20,7 +20,7 @@
             <td>{$libro->autor}</td>
             <td>{$libro->sinopsis|truncate:25}</td>
             <td>{$libro->anio}</td>
-            <td>{$libro->nombre}</td>
+            <td>{$libro->genero}</td>
             <td>{$libro->precio}</td>
             <td>
                 {if $libro->disponibilidad}
@@ -29,7 +29,7 @@
                     <span class="border border-danger">No Disponible</span>
                 {/if}
             </td>
-            <td><a href='verlibro/{$libro->id}' type='button' class='btn btn-success'>Ver mas</a></td>
+            <td><a href='libro/{$libro->id}' type='button' class='btn btn-success'>Ver mas</a></td>
         </tr>
     {/foreach}
     
