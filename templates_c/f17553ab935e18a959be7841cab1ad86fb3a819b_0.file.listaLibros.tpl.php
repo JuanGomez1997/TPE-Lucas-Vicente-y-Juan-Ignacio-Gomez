@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-15 07:47:04
+/* Smarty version 4.2.1, created on 2023-10-15 22:11:32
   from 'Z:\XAMPP\htdocs\WebII\TPE\templates\listaLibros.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652b7cd83c8348_73470367',
+  'unifunc' => 'content_652c47747c5c90_04081922',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f17553ab935e18a959be7841cab1ad86fb3a819b' => 
     array (
       0 => 'Z:\\XAMPP\\htdocs\\WebII\\TPE\\templates\\listaLibros.tpl',
-      1 => 1697348822,
+      1 => 1697400647,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652b7cd83c8348_73470367 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652c47747c5c90_04081922 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

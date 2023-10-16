@@ -23,12 +23,12 @@ class ModeloLibros {
 
     public function InsertarLibro ($titulo, $autor, $sinopsis, $anio, $genero, $precio) {
         $query = $this->db->prepare('INSERT INTO libros (titulo, autor, sinopsis, anio, genero, precio, disponibilidad) VALUES (?, ?, ?, ?, ?, ?, ?)');
-        $query->execute([$titulo, $autor, $sinopsis, $anio, $genero, $precio]);
+        $query->execute([$titulo, $autor, $sinopsis, $anio, $genero, $precio, 1]);
         return $this->db->lastInsertId();
     }
 
     public function editarLibro ($titulo, $autor, $sinopsis, $anio, $genero, $precio, $disponibilidad, $id) {
-        $query = $this->db->prepare('UPDATE libros SET titulo=?, autor=?, sinopsis=?, anio=?, genero=?, precio=?, disponibilidad=? WHERE (libro.id=?)');
+        $query = $this->db->prepare('UPDATE libros SET titulo=?, autor=?, sinopsis=?, anio=?, genero=?, precio=?, disponibilidad=? WHERE libros.id=?');
         $query->execute([$titulo, $autor, $sinopsis, $anio, $genero, $precio, $disponibilidad, $id]);
     }
 
@@ -36,7 +36,5 @@ class ModeloLibros {
         $query = $this->db->prepare('DELETE FROM libros WHERE id=?');
         $query->execute([$id]);
     }
-
-    
 
 }

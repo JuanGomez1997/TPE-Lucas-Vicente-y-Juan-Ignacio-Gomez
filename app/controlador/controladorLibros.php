@@ -6,24 +6,24 @@ require_once './app/modelo/modeloGeneros.php';
 
 class ControladorLibros {
     private $vista;
-    private $modelo;
+    private $modeloLibros;
     private $modeloGeneros;
 
     function __construct () {
         AutHelper::verify();
-        $this->modelo = new ModeloLibros();
+        $this->modeloLibros = new ModeloLibros();
         $this->vista = new VistaLibros();
         $this->modeloGeneros = new ModeloGeneros();
     }
 
     public function mostrarLista() {
-        $libros = $this->modelo->obtenerLibros();
+        $libros = $this->modeloLibros->obtenerLibros();
         $generos = $this->modeloGeneros->obtenerGeneros();
         $this->vista->mostrarLista($libros, $generos);
     }
 
     public function mostrarLibroId($id) {
-        $libros = $this->modelo->obtenerLibroId($id);
+        $libros = $this->modeloLibros->obtenerLibroId($id);
         $generos = $this->modeloGeneros->obtenerGeneros();
         $this->vista->mostrarLibroId($id, $libros, $generos);
     }
@@ -42,9 +42,9 @@ class ControladorLibros {
             return;
         }
 
-        $id = $this->modelo->insertarLibro($titulo, $autor, $sinopsis, $anio, $genero, $precio);
+        $id = $this->modeloLibros->insertarLibro($titulo, $autor, $sinopsis, $anio, $genero, $precio);
         if ($id) {
-            //header('Location: ' . BASE_URL);
+            header('Location: ' . BASE_URL);
         }
         else {
             $this->vista->mostrarError("Error al intentar insertar el libro");
@@ -65,17 +65,13 @@ class ControladorLibros {
             return;
         }
 
-        $id = $this->modelo->editarLibro($titulo, $autor, $sinopsis, $anio, $genero, $precio, $disponibilidad, $id);
-        if ($id) {
-            header('Location: ' . BASE_URL);
-        }
-        else {
-            $this->vista->mostrarError("Error al intentar editar el libro");
-        }
+        $this->modeloLibros->editarLibro($titulo, $autor, $sinopsis, $anio, $genero, $precio, $disponibilidad, $id);
+        header('Location: ' . BASE_URL . 'libro/' . $id);
+
     }
 
     public function eliminarLibro($id) {
-        $this->modelo->eliminarLibro($id);
+        $this->modeloLibros->eliminarLibro($id);
         header('Location: ' . BASE_URL);
     }
     

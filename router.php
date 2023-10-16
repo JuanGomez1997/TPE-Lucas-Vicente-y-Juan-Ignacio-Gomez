@@ -11,13 +11,22 @@ if (!empty($_GET['accion'])) {
     $accion = $_GET['accion'];
 }
 
-// inicio       ->          controladorLibros->mostrarLista();
-// libro/:ID    ->          controladorLibros->mostrarLibro($id);
-// login        ->          controladorAut->mostrarLogin();
-// aut          ->          controladorAut->aut();
+// inicio           ->          controladorLibros->mostrarLista();
+// login            ->          controladorAut->mostrarLogin();
+// aut              ->          controladorAut->aut();
+// logout           ->          controladorAut->logout();
+// libro/:ID        ->          controladorLibros->mostrarLibro($id);
+// aniadirLibro     ->          controladorLibros->aniadirLibro();
+// editarLibro      ->          controladorLibros->editarLibro($id);
+// eliminarLibro    ->          controladorLibros->eliminarLibro($id);
+// vergeneros       ->          controladorGeneros->listarGeneros();
+// agregargenero    ->          controladorGeneros->agregarGenero();
+// librosporgenero  ->          controladorGeneros->listarLibrosporGenero($id);
+// editargenero     ->          controladorGeneros->editarGenero($id);
+// eliminargenero   ->          controladorGeneros->eliminarGeneroLista($id);
 
 $params = explode('/', $accion); //parseo la accion de los parametros
-    
+
 switch ($params[0]) {
     case ('inicio'):
         $controlador = new ControladorLibros();
@@ -60,19 +69,16 @@ switch ($params[0]) {
         $controlador->agregarGenero();
         break;
     case 'librosporgenero':
-        $id = $params[1];
         $controlador = new ControladorGeneros();
-        $controlador->listarLibrosporGenero($id);
+        $controlador->listarLibrosporGenero($params[1]);
         break;
     case 'editargenero':
-        $id = $params[1];
         $controlador = new ControladorGeneros();
-        $controlador->editarGenero($id);
+        $controlador->editarGenero($params[1]);
         break;
     case 'eliminargenero':
-        $id = $params[1];
         $controlador = new ControladorGeneros();
-        $controlador->eliminarGeneroLista($id);
+        $controlador->eliminarGeneroLista($params[1]);
         break;
     default: 
         echo '<h1> 404 Page Not Found </h1>';

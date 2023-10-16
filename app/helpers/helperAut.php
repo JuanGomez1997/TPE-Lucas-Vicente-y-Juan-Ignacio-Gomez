@@ -16,8 +16,6 @@ class AutHelper {
 
     public static function verify() {
         AutHelper::init();
-        if (!isset($_SESSION['id_usuario'])) {
-        }
     }
 
     public static function logout() {

@@ -33,7 +33,7 @@
         }
         //modifico un genero existentes
         public function actualizarGenero($genero,$id){
-            $query = $this->db_bibliotea->prepare("UPDATE generos SET nombre=? WHERE generos.id_genero=?");
+            $query = $this->db_bibliotea->prepare("UPDATE generos SET genero=? WHERE generos.id_genero=?");
             $query->execute([$genero,$id]);
         }
 
