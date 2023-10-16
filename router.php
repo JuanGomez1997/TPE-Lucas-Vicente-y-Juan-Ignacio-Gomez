@@ -19,7 +19,7 @@ if (!empty($_GET['accion'])) {
 // aniadirLibro     ->          controladorLibros->aniadirLibro();
 // editarLibro      ->          controladorLibros->editarLibro($id);
 // eliminarLibro    ->          controladorLibros->eliminarLibro($id);
-// vergeneros       ->          controladorGeneros->listarGeneros();
+// generos          ->          controladorGeneros->listarGeneros();
 // agregargenero    ->          controladorGeneros->agregarGenero();
 // librosporgenero  ->          controladorGeneros->listarLibrosporGenero($id);
 // editargenero     ->          controladorGeneros->editarGenero($id);
@@ -48,9 +48,9 @@ switch ($params[0]) {
         $controlador= new ControladorLibros;
         $controlador->mostrarLibroId($params[1]);
         break;
-    case ('aniadirLibro'):
+    case ('agregarLibro'):
         $controlador= new ControladorLibros;
-        $controlador->aniadirLibro();
+        $controlador->agregarLibro();
         break;
     case ('editarLibro'):
         $controlador= new ControladorLibros;
@@ -60,23 +60,23 @@ switch ($params[0]) {
         $controlador= new ControladorLibros;
         $controlador->eliminarLibro($params[1]);
         break;
-    case 'vergeneros':
+    case 'generos':
         $controlador= new ControladorGeneros;
         $controlador->listarGeneros();
         break;
-    case 'agregargenero':
-        $controlador= new ControladorGeneros;
-        $controlador->agregarGenero();
-        break;
-    case 'librosporgenero':
+    case 'genero':
         $controlador = new ControladorGeneros();
         $controlador->listarLibrosporGenero($params[1]);
         break;
-    case 'editargenero':
+    case 'agregarGenero':
+        $controlador= new ControladorGeneros;
+        $controlador->agregarGenero();
+        break;    
+    case 'editarGenero':
         $controlador = new ControladorGeneros();
         $controlador->editarGenero($params[1]);
         break;
-    case 'eliminargenero':
+    case 'eliminarGenero':
         $controlador = new ControladorGeneros();
         $controlador->eliminarGeneroLista($params[1]);
         break;

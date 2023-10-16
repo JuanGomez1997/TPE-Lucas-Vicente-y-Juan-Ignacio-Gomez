@@ -28,7 +28,7 @@ class ControladorLibros {
         $this->vista->mostrarLibroId($id, $libros, $generos);
     }
 
-    public function aniadirLibro() {
+    public function agregarLibro() {
         
         $titulo = $_POST['titulo'];
         $autor = $_POST['autor'];
@@ -42,7 +42,7 @@ class ControladorLibros {
             return;
         }
 
-        $id = $this->modeloLibros->insertarLibro($titulo, $autor, $sinopsis, $anio, $genero, $precio);
+        $id = $this->modeloLibros->agregarLibro($titulo, $autor, $sinopsis, $anio, $genero, $precio);
         if ($id) {
             header('Location: ' . BASE_URL);
         }
@@ -76,4 +76,3 @@ class ControladorLibros {
     }
     
 }
-?>
