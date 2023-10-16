@@ -4,18 +4,21 @@
     {include file="formularioLibro.tpl"}
 {/if}
 
-<div>
-    <h1>Libros:</h1>
+<div class="espaciado">
+    
+    {foreach from=$libros item=$libro}
+    <h1 class="titulo-genero">Libro:{$libro->titulo}</h1>
+    {/foreach}
     <table class="table">
         <thead class="thead-light">
             <tr>
-                <th>Titulo</th>
-                <th>Autor</th>
-                <th>Sinópsis</th>
-                <th>Año</th>
-                <th>Género</th>
-                <th>Precio</th>
-                <th>Disponibilidad</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Sinópsis</th>
+                <th scope="col">Año</th>
+                <th scope="col">Género</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Disponibilidad</th>
                 {if isset($_SESSION['id_usuario'])} 
                     <th></th>
                 {/if}
@@ -24,7 +27,7 @@
         <tbody>
             {foreach from=$libros item=$libro}
                 <tr>
-                    <td>{$libro->titulo}</td>
+                    <td scope="row">{$libro->titulo}</td>
                     <td>{$libro->autor}</td>
                     <td>{$libro->sinopsis}</td>
                     <td>{$libro->anio}</td>
@@ -32,17 +35,18 @@
                     <td>{$libro->precio}</td>
                     <td>
                     {if $libro->disponibilidad}
-                        <span class="border border-success">Disponible</span>
+                        <span class="border border-success negrita verde">Disponible</span>
                     {else}
-                        <span class="border border-danger">No Disponible</span>
+                        <span class="border border-danger negrita rojo">No Disponible</span>
                     {/if}
                     </td>
                     {if isset($_SESSION['id_usuario'])} 
-                        <td><a href='eliminarLibro/{$libro->id}' type="button">Borrar</a></td>
+                        <td><a href='eliminarLibro/{$libro->id}' type="button" class="btn btn-outline-danger negrita">Borrar</a></td>
                     {/if}
                 </tr>
             {/foreach}
         </tbody>
     </table>
 </div>
+
 {include file="footer.tpl"}

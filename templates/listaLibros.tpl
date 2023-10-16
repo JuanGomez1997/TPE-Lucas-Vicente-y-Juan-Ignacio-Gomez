@@ -5,10 +5,10 @@
     {/if}
     
     <div>
-        <h1>Libros:</h1>
-        <ul>
+        <h1 class="titulo-genero">Historial de libros de la Biblioteca:</h1>
+        <ul class="list-group list-group-numbered">
             {foreach from=$libros item=$libro}
-                <li><a href="libro/{$libro->id}">{$libro->titulo}</a></li>
+                <li class="list-group-item"><a href="libro/{$libro->id}">{$libro->titulo}</a></li>
             {/foreach}
         </ul>
     </div>

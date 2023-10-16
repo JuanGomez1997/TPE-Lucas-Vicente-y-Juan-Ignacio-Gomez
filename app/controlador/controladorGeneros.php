@@ -48,7 +48,7 @@ class ControladorGeneros {
             }
 
         $genero = $_POST ['genero'];  
-        $this->modeloGeneros->actualizarGenero ($genero,$id);
+        $this->modeloGeneros->actualizarGenero($genero,$id);
         header("Location: " . BASE_URL . "generos");
 
         }
