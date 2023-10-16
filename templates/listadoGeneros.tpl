@@ -1,20 +1,23 @@
 {include file="header.tpl"}
 
+{if isset($_SESSION['id_usuario'])} 
+    {include file="formularioGenero.tpl"}
+{/if}
+
 <div>
     <h2>Generos Disponibles</h2>
-    <ul class="list-group list-group-flush">
-    {foreach from=$generos item=$genero}    
-        <li class="list-group-item">
-            <span>{$genero->nombre}</span>
-            <div>
-                <a href='librosporgenero/{$genero->id_genero}' type='button' class='btn btn-success'>Ver genero</a>
-                <!-- esto solo lo ve cuando se loguea-->
-                <a href='editargenero/{$genero->id_genero}' type='button' class='btn btn-warning'>Editar genero</a>
-                <a href='eliminargenero/{$genero->id_genero}' type='button' class='btn btn-danger'>Eliminar genero</a>
-            </div>
-        </li>
-    {/foreach}    
-    </ul>
+    <table>
+        <tbody>
+            {foreach from=$generos item=$genero}
+                <tr>
+                    <td><a href='genero/{$genero->id_genero}' type='button' class='btn btn-success'>{$genero->genero}</a></td>
+                    {if isset($_SESSION['id_usuario'])} 
+                        <td><a href='eliminarGenero/{$genero->id_genero}' type='button' class='btn btn-danger'>Eliminar genero</a></td>
+                    {/if}
+                </tr>
+            {/foreach}
+        </tbody>
+    </table>
 </div>
 
 {include file="footer.tpl"}

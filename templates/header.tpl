@@ -10,7 +10,7 @@
     <title>Biblioteca</title>
 </head>
 <body>
-    <header><!--poner los nav en color marron tipo  madera,deajrlo para despues-->
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="inicio">Biblioteca</a>
@@ -20,31 +20,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="generos">Generos</a>
+                        </li>
+                        <li class="nav-item">
                             {if !isset($_SESSION['id_usuario'])}
                                 <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
-                            {else }
+                            {else}
                                 <a class="nav-link active" aria-current="page" href="logout">cerrar sesion</a>
                             {/if}
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="vergeneros">Ver Generos</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-        <!--este nav lo usariamos cuando el usuario esta logueado-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light espaciado">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="agregargenero">Agregar Genero</a>
-                        </li>      
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    <main>
-
+</body>

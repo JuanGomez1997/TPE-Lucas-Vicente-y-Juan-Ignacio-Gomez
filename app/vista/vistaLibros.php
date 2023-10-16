@@ -12,6 +12,7 @@ class VistaLibros {
     public function mostrarLista($libros, $generos, $error = null) {
         $this->smarty->assign('libros', $libros);
         $this->smarty->assign('generos', $generos);
+        $this->smarty->assign('opcion', 'agregar');
         $this->smarty->assign('error', $error);
         $this->smarty->assign('_SESSION', $_SESSION);
         $this->smarty->display('listaLibros.tpl');        
@@ -21,6 +22,7 @@ class VistaLibros {
         $this->smarty->assign('id', $id);
         $this->smarty->assign('libros', $libros);
         $this->smarty->assign('generos', $generos);
+        $this->smarty->assign('opcion','editar');
         $this->smarty->assign('error', $error);
         $this->smarty->assign('_SESSION', $_SESSION);
         $this->smarty->display('libroId.tpl');
