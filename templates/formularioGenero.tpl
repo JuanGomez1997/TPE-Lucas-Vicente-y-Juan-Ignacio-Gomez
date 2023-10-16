@@ -16,6 +16,9 @@
             <div class="col-12 text-center">
                 <button class="btn btn-primary" type="submit">Enviar</button>
             </div>
+            {if $error != null}
+                {include file="error.tpl"}
+            {/if}
         </form>
     </div>
 </div>

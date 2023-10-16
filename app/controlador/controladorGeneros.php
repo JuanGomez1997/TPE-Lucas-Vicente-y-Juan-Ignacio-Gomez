@@ -59,7 +59,8 @@ class ControladorGeneros {
             $this->modeloGeneros->eliminarGenero($id);
             header("Location: " . BASE_URL . "generos");
         } catch(Exception $e) {
-            $this->vista->mostrarError($e);
+            $error = 'No se puede eliminar porque en este genero hay libros, si aun quiere eliminar este genero tendra que cambiar el genero y/o eliminar dichos libros';
+            $this->vista->mostrarError($error);
         }
     }
 
