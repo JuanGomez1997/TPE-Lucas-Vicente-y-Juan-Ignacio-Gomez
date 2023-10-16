@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-14 09:17:51
+/* Smarty version 4.2.1, created on 2023-10-15 17:13:22
   from 'J:\xammp\htdocs\Web 2\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652a409fa5cda6_54158652',
+  'unifunc' => 'content_652c0192073a12_85130382',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ffe8263157ed62635a305e6b2c4bbb7a0b158bf' => 
     array (
       0 => 'J:\\xammp\\htdocs\\Web 2\\TPE-Lucas-Vicente-y-Juan-Ignacio-GomezPublic\\TPE-Lucas-Vicente-y-Juan-Ignacio-Gomez\\templates\\header.tpl',
-      1 => 1697215176,
+      1 => 1697382800,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652a409fa5cda6_54158652 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652c0192073a12_85130382 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@ function content_652a409fa5cda6_54158652 (Smarty_Internal_Template $_smarty_tpl)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleprueba.css">
     <title>Biblioteca</title>
 </head>
 <body>
@@ -44,18 +44,22 @@ function content_652a409fa5cda6_54158652 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
+                            <?php if (!(isset($_smarty_tpl->tpl_vars['_SESSION']->value['id_usuario']))) {?>
+                                <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
+                            <?php } else { ?>
+                                <a class="nav-link active" aria-current="page" href="logout">cerrar sesion</a>
+                            <?php }?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="vergeneros">Ver Generos</a>
-                        </li>      
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
         <!--este nav lo usariamos cuando el usuario esta logueado-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light espaciado">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -66,7 +70,7 @@ function content_652a409fa5cda6_54158652 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
         </nav>
-</body>
+    <main>
 
 <?php }
 }
