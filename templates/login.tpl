@@ -5,6 +5,7 @@
             <label for="nombre_usuario">Nombre de Usuario</label>
             <input type="text" class="form-control" name="nombre_usuario" id="nombre_usuario" required>
         </div>
+        
         <div class="form-group">
             <label for="contrasenia">Contraseña</label>
             <input type="password" class="form-control" name="contrasenia" id="contrasenia" required>
@@ -15,7 +16,9 @@
                 <p>{$error}</p>
             </div>
         {/if}
+        
     </form>
 </div>
+</body>
 
 {include file="footer.tpl"}

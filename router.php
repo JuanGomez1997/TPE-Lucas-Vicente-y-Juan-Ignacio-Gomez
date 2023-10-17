@@ -81,6 +81,7 @@ switch ($params[0]) {
         $controlador->eliminarGeneroLista($params[1]);
         break;
     default: 
-        echo '<h1> 404 Page Not Found </h1>';
+        $controlador = new ControladorAut();
+        $controlador->mostrar404();
         break;
 }
