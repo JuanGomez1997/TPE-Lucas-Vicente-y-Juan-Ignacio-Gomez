@@ -12,4 +12,8 @@ Class VistaAut {
         $this->smarty->assign('error', $error);
         $this->smarty->display('login.tpl');       
     }
+
+    public function mostrar404() {
+        $this->smarty->display('404.tpl');
+    }
 }

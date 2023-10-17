@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-16 04:16:21
+/* Smarty version 4.2.1, created on 2023-10-17 01:22:52
   from 'Z:\XAMPP\htdocs\WebII\TPE\templates\listadoGeneros.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652c9cf5761e92_29570755',
+  'unifunc' => 'content_652dc5cc4d0804_17731173',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9b20874513251c58f83f6072a144988a4d8976c' => 
     array (
       0 => 'Z:\\XAMPP\\htdocs\\WebII\\TPE\\templates\\listadoGeneros.tpl',
-      1 => 1697422580,
+      1 => 1697498507,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_652c9cf5761e92_29570755 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652dc5cc4d0804_17731173 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -31,8 +31,8 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     <?php $_smarty_tpl->_subTemplateRender("file:formularioGenero.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }?>
 
-<div>
-    <h2>Generos Disponibles</h2>
+<div class="col-md-4 mx-auto">
+    <h2 class="h2-genero">Generos Disponibles</h2>
     <table>
         <tbody>
             <?php
@@ -43,11 +43,11 @@ $_smarty_tpl->tpl_vars['genero']->do_else = false;
 ?>
                 <tr>
                     <td><a href='genero/<?php echo $_smarty_tpl->tpl_vars['genero']->value->id_genero;?>
-' type='button' class='btn btn-success'><?php echo $_smarty_tpl->tpl_vars['genero']->value->genero;?>
+' type='button' class='btn btn-outline-primary'>Listado del genero <?php echo $_smarty_tpl->tpl_vars['genero']->value->genero;?>
 </a></td>
                     <?php if ((isset($_smarty_tpl->tpl_vars['_SESSION']->value['id_usuario']))) {?> 
                         <td><a href='eliminarGenero/<?php echo $_smarty_tpl->tpl_vars['genero']->value->id_genero;?>
-' type='button' class='btn btn-danger'>Eliminar genero</a></td>
+' type='button' class='btn btn-outline-danger'>Eliminar genero</a></td>
                     <?php }?>
                 </tr>
             <?php

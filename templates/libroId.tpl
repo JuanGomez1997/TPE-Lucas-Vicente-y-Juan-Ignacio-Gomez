@@ -4,12 +4,9 @@
     {include file="formularioLibro.tpl"}
 {/if}
 
-<div class="espaciado">
-    
-    {foreach from=$libros item=$libro}
-    <h1 class="titulo-genero">Libro:{$libro->titulo}</h1>
-    {/foreach}
-    <table class="table">
+<div class="tabla-libros">
+
+    <table>
         <thead class="thead-light">
             <tr>
                 <th scope="col">Titulo</th>
@@ -31,8 +28,8 @@
                     <td>{$libro->autor}</td>
                     <td>{$libro->sinopsis}</td>
                     <td>{$libro->anio}</td>
-                    <td>{$libro->genero}</td>
-                    <td>{$libro->precio}</td>
+                    <td><a href='genero/{$libro->id_genero}'>{$libro->genero}</td>
+                    <td>${$libro->precio}</td>
                     <td>
                     {if $libro->disponibilidad}
                         <span class="border border-success negrita verde">Disponible</span>

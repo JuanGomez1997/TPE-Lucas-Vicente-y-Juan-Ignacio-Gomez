@@ -43,4 +43,8 @@ Class ControladorAut {
         AutHelper::logout();
         header('Location: ' . BASE_URL);    
     }
+
+    public function mostrar404() {
+        $this->vista->mostrar404();
+    }
 }
