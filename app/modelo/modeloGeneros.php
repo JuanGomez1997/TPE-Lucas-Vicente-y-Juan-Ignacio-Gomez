@@ -1,9 +1,9 @@
 <?php
-class ModeloGeneros {
-    private $db;
-    public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;'.'dbname=biblioteca;charset=utf8', 'root', '');
-    }
+
+require_once "modelo.php";
+
+class ModeloGeneros extends Modelo {
+    protected $db;
 
     //obtengo los generos para mostrar
     public function obtenerGeneros() {

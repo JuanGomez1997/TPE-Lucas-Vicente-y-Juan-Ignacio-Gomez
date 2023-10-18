@@ -48,13 +48,13 @@ class ControladorGeneros {
             }
 
         $genero = $_POST ['genero'];  
-        $this->modeloGeneros->actualizarGenero($genero,$id);
+        $this->modeloGeneros->actualizarGenero($genero, $id);
         header("Location: " . BASE_URL . "generos");
 
         }
     }
 
-    public function eliminarGeneroLista($id) {
+    public function eliminarGenero($id) {
         try {
             $this->modeloGeneros->eliminarGenero($id);
             header("Location: " . BASE_URL . "generos");

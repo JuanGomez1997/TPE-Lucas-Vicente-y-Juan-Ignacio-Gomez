@@ -1,11 +1,9 @@
 <?php
 
-class ModeloLibros {
-    private $db;
+require_once "modelo.php";
 
-    function __construct() {
-        $this->db = new PDO('mysql:host=localhost;dbname=biblioteca;charset=utf8', 'root', '');    
-    }
+class ModeloLibros extends Modelo {
+    protected $db;
 
     function obtenerLibros () {
         $query = $this->db->prepare('SELECT * FROM libros JOIN generos ON libros.genero=generos.id_genero');
