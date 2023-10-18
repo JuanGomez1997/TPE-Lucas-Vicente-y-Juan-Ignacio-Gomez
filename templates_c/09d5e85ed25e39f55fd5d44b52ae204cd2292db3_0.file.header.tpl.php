@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-10-17 09:11:25
+/* Smarty version 4.2.1, created on 2023-10-18 04:13:25
   from 'Z:\XAMPP\htdocs\WebII\TPE\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_652e339d8c5d77_43931023',
+  'unifunc' => 'content_652f3f45cfa9d0_04580011',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09d5e85ed25e39f55fd5d44b52ae204cd2292db3' => 
     array (
       0 => 'Z:\\XAMPP\\htdocs\\WebII\\TPE\\templates\\header.tpl',
-      1 => 1697526683,
+      1 => 1697595204,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652e339d8c5d77_43931023 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652f3f45cfa9d0_04580011 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +49,8 @@ function content_652e339d8c5d77_43931023 (Smarty_Internal_Template $_smarty_tpl)
                             </li>
                             <li class="nav-item">
                                 <?php if ((isset($_smarty_tpl->tpl_vars['_SESSION']->value['id_usuario']))) {?>
-                                    <a class="nav-link active" aria-current="page" href="logout">cerrar sesion</a>
+                                    <a class="nav-link active" aria-current="page" href="logout">cerrar sesion (<?php echo $_smarty_tpl->tpl_vars['_SESSION']->value['nombre_usuario'];?>
+)</a>
                                 <?php } else { ?>
                                     <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
                                 <?php }?>

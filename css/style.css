@@ -5,6 +5,7 @@
 
 header {
     position: fixed;
+    z-index: 1000;
     width: 100%;
 }
 
@@ -93,9 +94,9 @@ address {
     color: #ff6600; 
 }
 
-.titulo-genero {
+.titulo {
     text-align: center; 
-    margin-top: 10px;
+    margin: 30px;
     position: relative;
     font-family: 'Times New Roman',sans-serif;
 }
@@ -175,6 +176,12 @@ p {
     margin-bottom: 0%;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
 .sinopsis  {
     display: inline !important;
 }
@@ -188,10 +195,29 @@ p {
     justify-content: center;
 }
 
-.lista-libros {
-    margin: 50px 0px;
+.div-lista {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
+
+.div-lista > ul > li {
+    border: #565e7d solid 1px;
+    padding: 10px;
+    text-align: center;
+    background-color: #18181f;
+}
+
+.div-lista > ul > li > a {
+    color: white;
+}
+
+.lista-libros {
+    margin-bottom: 50px;
+    width: 50%;
+    text-align: center;
+}
 .tabla-libros {
     display: flex;
     justify-content: center;
@@ -218,6 +244,23 @@ thead > tr > th, tbody > tr > td {
     color: white;
 }
 
-.sinopsis {
-    text-align: justify !important;
+.genero {
+    color: white;
+}
+
+.div-login {
+    margin: 50px;
+}
+
+.div-login > form {
+    display: grid;
+    justify-content: center;
+}
+
+.div-login > form > div {
+    margin: 5px 10px;
+}
+
+.div-login > form > button {
+    margin-top: 10px;
 }

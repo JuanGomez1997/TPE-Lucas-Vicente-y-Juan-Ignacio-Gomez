@@ -34,10 +34,10 @@
                         <p class="borde">{$libro->titulo}</p>
                         <p>{$libro->autor}</p>
                     </td>
-                    <td><p class="sinopsis">{$libro->sinopsis}</p></td>
+                    <td><p>{$libro->sinopsis}</p></td>
                     <td>
                         <p class="borde">{$libro->anio}</p>
-                        <p><a href='genero/{$libro->id_genero}'>{$libro->genero}</p>
+                        <p><a class="genero" href='genero/{$libro->id_genero}'>{$libro->genero}</p>
                     </td>
                     <td>
                         <p class="borde">${$libro->precio}</p>
@@ -50,7 +50,7 @@
                         </p>
                     </td>
                     {if isset($_SESSION['id_usuario'])} 
-                        <td><a href='eliminarLibro/{$libro->id}' type="button" class="btn btn-outline-danger negrita">Borrar</a></td>
+                        <td><a href='eliminarLibro/{$libro->id}' type="button" class="btn btn-outline-danger negrita borrar">Borrar</a></td>
                     {/if}
                 </tr>
             {/foreach}

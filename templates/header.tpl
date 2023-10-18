@@ -25,7 +25,7 @@
                             </li>
                             <li class="nav-item">
                                 {if isset($_SESSION['id_usuario'])}
-                                    <a class="nav-link active" aria-current="page" href="logout">cerrar sesion</a>
+                                    <a class="nav-link active" aria-current="page" href="logout">cerrar sesion ({$_SESSION['nombre_usuario']})</a>
                                 {else}
                                     <a class="nav-link active" aria-current="page" href="login">iniciar sesion</a>
                                 {/if}
