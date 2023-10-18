@@ -201,9 +201,23 @@ p {
 
 .tabla-libros > table {
     width: 80%;
-    
 }
 
-.tabla-libros > table > tbody > tr > td {
-    border: #222;
+.borde {
+    border: #565e7d solid 1px;
+    border-top: 3cm;
+    border-left: 3cm;
+    border-right: 3cm;
+}
+
+thead > tr > th, tbody > tr > td {
+    border: #565e7d solid 1px;
+    padding: 10px;
+    text-align: center;
+    background-color: #18181f;
+    color: white;
+}
+
+.sinopsis {
+    text-align: justify !important;
 }
